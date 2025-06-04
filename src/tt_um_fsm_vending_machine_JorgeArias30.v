@@ -3,13 +3,13 @@
 
 module tt_um_fsm_vending_machine_JorgeArias30(
 
-  input  wire [4:0] ui_in; // ui_in,
-  output wire [6:0] uo_out// product,// credit uo_out;       
+  input  wire [4:0] ui_in, // ui_in,
+  output wire [6:0] uo_out,// product,// credit uo_out;       
  // output wire [5:0] 
 
-  input  wire clk;
-  input  wire ena;
-  input  wire rst_n;
+  input  wire clk,
+  input  wire ena,
+  input  wire rst_n,
 /*
   input wire m,       // m - Moneda
   input wire a;       // a - Aceptado
