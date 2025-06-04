@@ -50,3 +50,5 @@ fsm_top fsm_vending_machine(
   .p(product),
   .c(credit)
 );
+
+endmodule
