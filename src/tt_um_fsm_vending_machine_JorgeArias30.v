@@ -26,24 +26,24 @@ module tt_um_fsm_vending_machine_JorgeArias30(
  wire [2:0] credit;
  wire       disp_sign;
 
-  wire [0]   m       = ui_in;
-  wire [1]   a       = ui_in;
-  wire [2]   btnC    = ui_in;
-  wire [3]   btnD    = ui_in;
-  wire [2:0] product = uo_out;
-  wire [5:3] credit  = uo_out;
+  wire [0]   moneda    = ui_in;
+  wire [1]   aceptado  = ui_in;
+  wire [2]   btnC      = ui_in;
+  wire [3]   btnD      = ui_in;
+  wire [2:0] product   = uo_out;
+  wire [5:3] credit    = uo_out;
 
   
   
   
 
 fsm_top fsm_vending_machine(
-    input clk,
-    input m,
-    input a,
-    input btnC,
-    input btnD,
-    output d,
-    output [2:0] p,
-    output [2:0] c
+  .clk(clk),
+  .m(moneda),
+  .a(aceptado),
+  .btnC(btnC),
+  .btnD(btnD),
+  .d(disp_sign),
+  .p(product),
+  .c(credit)
 );
