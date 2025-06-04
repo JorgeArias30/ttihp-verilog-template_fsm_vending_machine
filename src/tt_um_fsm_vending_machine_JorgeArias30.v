@@ -1,7 +1,73 @@
 `default_nettype none
 // `include "fsm_top.v"
+module tt_um_fsm_vending_machine_JorgeArias30 (
+    input  wire [7:0] ui_in,     // ui_in[0]: moneda (m), ui_in[1]: aceptar (a), ui_in[2]: reset FSM Moore, ui_in[3]: reset FSM Mealy
+    output wire [7:0] uo_out,    // uo_out[0]: señal de dispensado, uo_out[3:1]: producto, uo_out[6:4]: crédito
+    input  wire [7:0] uio_in,
+    output wire [7:0] uio_out,
+    output wire [7:0] uio_oe,
+    input  wire clk,
+    input  wire ena,
+    input  wire rst_n
+);
 
-module tt_um_fsm_vending_machine_JorgeArias30(
+    // Señales internas
+    wire int_clk;
+    wire [2:0] credit;
+    wire dispense_signal;
+    wire [2:0] producto;
+
+    // Prescaler de reloj (si lo necesitas)
+    assign int_clk = clk; // Puedes reemplazar esto con un prescaler si lo tienes
+
+    // Instancia del módulo FSM
+    fsm_top fsm_inst (
+        .clk(int_clk),
+        .m(ui_in[0]),
+        .a(ui_in[1]),
+        .btnC(ui_in[2]),
+        .btnD(ui_in[3]),
+        .d(dispense_signal),
+        .p(producto),
+        .c(credit)
+    );
+
+    // Salida combinada
+    assign uo_out[0]   = dispense_signal;
+    assign uo_out[3:1] = producto;
+    assign uo_out[6:4] = credit;
+    assign uo_out[7]   = 1'b0;
+
+    // Pines bidireccionales en alta impedancia
+    assign uio_out = 8'b0;
+    assign uio_oe  = 8'b0;
+
+endmodule
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*module tt_um_fsm_vending_machine_JorgeArias30(
 //    input  wire [7:0] ui_in,     // ui_in[0]: moneda (m), ui_in[1]: aceptar (a), ui_in[2]: reset FSM Moore, ui_in[3]: reset FSM Mealy
     output wire [7:0] uo_out,    // uo_out[0]: señal de dispensado, uo_out[3:1]: producto, uo_out[6:4]: crédito
     input  wire [7:0] uio_in,
@@ -44,3 +110,4 @@ fsm_top fsm_inst (
     assign uio_oe  = 8'b0;
 
 endmodule
+*/
