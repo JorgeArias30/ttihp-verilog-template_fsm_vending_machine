@@ -8,11 +8,11 @@ module tt_um_fsm_vending_machine_JorgeArias30(
 //    input  wire [7:0] ui_in,     // ui_in[0]: moneda (m), ui_in[1]: aceptar (a), ui_in[2]: reset FSM Moore, ui_in[3]: reset FSM Mealy
 //    output wire [7:0] uo_out,    // uo_out[0]: señal de dispensado, uo_out[3:1]: producto, uo_out[6:4]: crédito
 //    input  wire [7:0] uio_in,
-    output wire [7:0] uio_out,
-    output wire [7:0] uio_oe,
-    input  wire clk,
-    input  wire ena,
-    input  wire rst_n
+//    output wire [7:0] uio_out,
+//    output wire [7:0] uio_oe,
+//    input  wire clk,
+//    input  wire ena,
+//    input  wire rst_n
 );
 
     // Señales internas
