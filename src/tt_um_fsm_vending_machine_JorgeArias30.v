@@ -13,7 +13,7 @@ module tt_um_fsm_vending_machine_JorgeArias30(
 //    input  wire clk,
 //    input  wire ena,
 //    input  wire rst_n
-);
+//);
 
     // Señales internas
     wire int_clk;
