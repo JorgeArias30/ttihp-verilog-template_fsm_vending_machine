@@ -17,8 +17,8 @@ module tt_um_fsm_vending_machine_JorgeArias30 (
     wire dispense_signal;
     wire [2:0] producto;
 
-    // Prescaler de reloj (si lo necesitas)
-    assign int_clk = clk; // Puedes reemplazar esto con un prescaler si lo tienes
+    // Prescaler de reloj 
+    assign int_clk = clk;
 
     // Instancia del módulo FSM
     fsm_top fsm_inst (
