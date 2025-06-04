@@ -5,6 +5,9 @@ module tt_um_fsm_vending_machine_JorgeArias30(
 
   input  wire [4:0] ui_in,    // ui_in,
   output wire [6:0] uo_out,  // product, credit uo_out
+  input wire  [4:0] uio_in,
+  input wire  [6:0] uio_out,
+  output wire [6:0] uio_oe,
 //  output wire [13:0] uio_in,
 //  output wire [13:0] uio_out, 
 //  output wire [13:0] uo_oe,
