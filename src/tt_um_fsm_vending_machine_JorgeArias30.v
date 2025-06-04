@@ -58,6 +58,3 @@ module tt_um_fsm_vending_machine_JorgeArias30(
     assign uio_oe  = 8'b0;
 
 endmodule
-
-
-endmodule
