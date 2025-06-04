@@ -1,4 +1,4 @@
-`default nettype none
+`default_nettype none
 `include "fsm_top.v"
 
 module tt_um_fsm_vending_machine_JorgeArias30(
