@@ -19,16 +19,16 @@ module tt_um_fsm_vending_machine_JorgeArias30(
     wire [2:0] producto;
 
 
-module fsm_top(
-  .clk(int_clk),
-  .m([0]ui_in),
-  .a([1]ui_in),
-  .btnC([1]ui_in),
-  .btnD([1]ui_in),
-  .d([0]uio_out),
-  .p([1:3]uio_out),
-  .c([4:6]uio_out)
-              );
+fsm_top fsm_inst (
+                  .clk(int_clk),
+                  .m([0]ui_in),
+                  .a([1]ui_in),
+                  .btnC([1]ui_in),
+                  .btnD([1]ui_in),
+                  .d([0]uio_out),
+                  .p([1:3]uio_out),
+                  .c([4:6]uio_out)
+                  );
 
 
 
