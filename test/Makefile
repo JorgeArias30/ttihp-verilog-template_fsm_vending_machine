@@ -5,7 +5,7 @@
 SIM ?= icarus
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
-PROJECT_SOURCES = project.v
+PROJECT_SOURCES = ../src/tt_um_fsm_vending_machine_JorgeArias30.v ../src/fsm_top.v ../src/moore.v ../src/mealy.v ../src/clock_prescaler.v
 
 ifneq ($(GATES),yes)
 
